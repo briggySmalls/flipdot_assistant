@@ -49,6 +49,87 @@
                     }
                 }
             }
+        },
+        {
+            "name": "com.briggysmalls.actions.show_clock",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "com.briggysmalls.intents.show_clock",
+                "trigger": {
+                    "queryPatterns": [
+                        "Show me the time"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Showing your the time"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "com.briggysmalls.commands.show_time"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "com.briggysmalls.actions.show_text",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "com.briggysmalls.intents.show_text",
+                "parameters": [
+                    {
+                        "name": "message",
+                        "type": "Message"
+                    }
+                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "Transcribe message $Message:message"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Transcribing your message message.raw"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "com.briggysmalls.commands.show_text",
+                                    "params": {
+                                        "message": "$message"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
         }
     ]
 }
