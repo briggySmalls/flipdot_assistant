@@ -1,0 +1,54 @@
+{
+    "manifest": {
+        "displayName": "flipdot",
+        "invocationName": "flipdot",
+        "category": "PRODUCTIVITY"
+    },
+    "actions": [
+        {
+            "name": "com.briggysmalls.actions.show_weather",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "com.briggysmalls.intents.show_weather",
+                "parameters": [
+                    {
+                        "name": "location",
+                        "type": "Location"
+                    }
+                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "Show me the weather (in $Location:location)?"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Showing your the weather"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "com.briggysmalls.commands.show_weather",
+                                    "params": {
+                                        "location": "$location"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ]
+}
