@@ -87,7 +87,7 @@
             }
         },
         {
-            "name": "com.briggysmalls.actions.show_text",
+            "name": "com.briggysmalls.actions.transcribe_message",
             "availability": {
                 "deviceClasses": [
                     {
@@ -96,7 +96,7 @@
                 ]
             },
             "intent": {
-                "name": "com.briggysmalls.intents.show_text",
+                "name": "com.briggysmalls.intents.transcribe_message",
                 "parameters": [
                     {
                         "name": "message",
@@ -120,7 +120,7 @@
                             },
                             {
                                 "deviceExecution": {
-                                    "command": "com.briggysmalls.commands.show_text",
+                                    "command": "com.briggysmalls.commands.transcribe_message",
                                     "params": {
                                         "message": "$message"
                                     }
