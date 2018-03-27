@@ -32,7 +32,7 @@ def show_weather(params):
     flipapps.show_weather()
 
 
-def show_clock(params):
+def show_time(params):
     flipapps.show_clock()
 
 
@@ -78,8 +78,8 @@ def process_event(event, device_id):
 
             if command == "com.briggysmalls.commands.show_weather":
                 show_weather(params)
-            elif command == "com.briggysmalls.commands.show_clock":
-                show_clock(params)
+            elif command == "com.briggysmalls.commands.show_time":
+                show_time(params)
             elif command == "com.briggysmalls.commands.transcribe_message":
                 transcribe_message(params)
 
