@@ -34,7 +34,7 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Showing your the weather"
+                                    "textToSpeech": "Showing you the weather"
                                 }
                             },
                             {
@@ -73,7 +73,7 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Showing your the time"
+                                    "textToSpeech": "Showing you the time"
                                 }
                             },
                             {
@@ -115,7 +115,7 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Transcribing your message message.raw"
+                                    "textToSpeech": "Transcribing your message $message.raw"
                                 }
                             },
                             {
