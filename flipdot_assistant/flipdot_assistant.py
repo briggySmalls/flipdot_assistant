@@ -25,11 +25,14 @@ flipapps = None
 
 
 def show_weather(params):
-    # location_query = params['location']
-    # geolocator = Nominatim()
-    # location = geolocator.geocode(location_query)
-    # coordinates = (location.latitude, location.longitude)
-    flipapps.show_weather()
+    coordinates = None
+    if params['location']:
+        location_query = params['location']
+        print("location {}".format(location_query))
+        geolocator = Nominatim()
+        location = geolocator.geocode(location_query)
+        coordinates = (location.latitude, location.longitude)
+    flipapps.show_weather(coordinates=coordinates)
 
 
 def show_time(params):
