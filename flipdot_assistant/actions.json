@@ -19,12 +19,12 @@
                 "parameters": [
                     {
                         "name": "location",
-                        "type": "Location"
+                        "type": "$SchemaOrg_Place"
                     }
                 ],
                 "trigger": {
                     "queryPatterns": [
-                        "flip the weather (in $Location:location)?"
+                        "flip the weather (in $$SchemaOrg_Place:location)?"
                     ]
                 }
             },
@@ -100,12 +100,12 @@
                 "parameters": [
                     {
                         "name": "message",
-                        "type": "Message"
+                        "type": "SchemaOrg_Text"
                     }
                 ],
                 "trigger": {
                     "queryPatterns": [
-                        "flip message $Message:message"
+                        "flip message $SchemaOrg_Text:message"
                     ]
                 }
             },
