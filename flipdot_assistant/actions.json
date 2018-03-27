@@ -24,7 +24,7 @@
                 ],
                 "trigger": {
                     "queryPatterns": [
-                        "Show me the weather (in $Location:location)?"
+                        "flip the weather (in $Location:location)?"
                     ]
                 }
             },
@@ -63,7 +63,7 @@
                 "name": "com.briggysmalls.intents.show_clock",
                 "trigger": {
                     "queryPatterns": [
-                        "Show me the time"
+                        "Flip the time"
                     ]
                 }
             },
@@ -87,7 +87,7 @@
             }
         },
         {
-            "name": "com.briggysmalls.actions.transcribe_message",
+            "name": "com.briggysmalls.actions.show_message",
             "availability": {
                 "deviceClasses": [
                     {
@@ -96,7 +96,7 @@
                 ]
             },
             "intent": {
-                "name": "com.briggysmalls.intents.transcribe_message",
+                "name": "com.briggysmalls.intents.show_message",
                 "parameters": [
                     {
                         "name": "message",
@@ -105,7 +105,7 @@
                 ],
                 "trigger": {
                     "queryPatterns": [
-                        "transcribe $Message:message"
+                        "flip message $Message:message"
                     ]
                 }
             },
@@ -115,12 +115,12 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Transcribing your message $message.raw"
+                                    "textToSpeech": "Transcribing your message"
                                 }
                             },
                             {
                                 "deviceExecution": {
-                                    "command": "com.briggysmalls.commands.transcribe_message",
+                                    "command": "com.briggysmalls.commands.show_message",
                                     "params": {
                                         "message": "$message"
                                     }
